@@ -60,13 +60,24 @@ namespace MVC_d1.Controllers
 
 
             List<user> user = SampleDate.user;
-            if (user.Count > 0)
+            //if (user.Count > 0)
+
+            //{
+            //    return View("GetAll", user);
+            //}
+            //else
+            //{
+            //    return Content("No products available");
+            //}
+
+            View("GetAll", user);
+            if (users.willAttend == "yes")
             {
-                return View("GetAll", user);
+                return View("GetAll");
             }
             else
             {
-                return Content("No products available");
+                return View("thank");
             }
         }
 
